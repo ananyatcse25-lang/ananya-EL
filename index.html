@@ -1,0 +1,83 @@
+<html>
+<head>
+<style>
+body{
+background:#FFC0CB;
+}
+.grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+}
+.grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+}
+</style>
+<text align="center">
+    <title>S.B.Jain Alumni Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>S.B.Jain Alumni Portal</h1>
+            <ul>
+           
+    </header>
+
+    <section id="register" class="hero">
+        <h2>Join Our Alumni Community</h2>
+        <form id="regForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="news" class="news-feed">
+        <h2>Latest News</h2>
+        <div id="newsContainer"></div>
+<p>Event 1: Alumni meet on 10th April</p>
+            <p>Event 2: College new building opening soon</p>
+
+    </section>
+    
+    <section id="gallery" class="photo-gallery">
+        <h2>Event Galleries</h2>
+        <div class="grid">
+            <img src="C:\Users\hp\OneDrive\Desktop\img 1..jpeg" alt="Event 1">
+            <img src="C:\Users\hp\OneDrive\Desktop\img 2..jpeg" alt="Event 2">
+            <img src="C:\Users\hp\OneDrive\Desktop\img 3..jpeg" alt="Event 3">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <section id="donate" class="donation">
+        <h2>Support Us</h2>
+        <form id="donateForm">
+            <div class="amount-buttons">
+                <button type="button" class="amount-btn" data-amount="25">₹25</button>
+                <button type="button" class="amount-btn" data-amount="50">₹50</button>
+                <button type="button" class="amount-btn" data-amount="100">₹100</button>
+                <button type="button" class="amount-btn" data-amount="250">₹250</button>
+            </div>
+            <input type="hidden" id="donationAmount" name="amount" value="">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Donate Now</button>
+        </form>
+    </section>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImg" src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
