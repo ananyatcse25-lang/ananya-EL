@@ -1,0 +1,141 @@
+<html>
+<head>
+    <title>S.B.Jain Alumni Portal</title>
+
+    
+    <style>
+        body {
+            background: #FFC0CB;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        form input, form button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .amount-btn {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <h1>S.B.Jain Alumni Portal</h1>
+        </nav>
+    </header>
+
+    <!-- REGISTER -->
+    <section>
+        <h2>Join Our Alumni Community</h2>
+        <form id="regForm">
+            <input type="text" placeholder="Full Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- NEWS -->
+    <section>
+        <h2>Latest News</h2>
+        <div id="newsContainer"></div>
+
+        <p>Event 1: Alumni meet on 10th April</p>
+        <p>Event 2: College new building opening soon</p>
+    </section>
+
+    <!-- GALLERY -->
+    <section>
+        <h2>Event Galleries</h2>
+
+        <div class="grid">
+            <img src="https://picsum.photos/300/200?random=1">
+            <img src="https://picsum.photos/300/200?random=2">
+            <img src="https://picsum.photos/300/200?random=3">
+        </div>
+    </section>
+
+    <!-- DONATION -->
+    <section>
+        <h2>Support Us</h2>
+
+        <form id="donateForm">
+            <div>
+                <button type="button" class="amount-btn" data-amount="25">₹25</button>
+                <button type="button" class="amount-btn" data-amount="50">₹50</button>
+                <button type="button" class="amount-btn" data-amount="100">₹100</button>
+                <button type="button" class="amount-btn" data-amount="250">₹250</button>
+            </div>
+
+            <input type="hidden" id="donationAmount">
+
+            <br>
+            <input type="text" placeholder="Your Name" required><br>
+            <input type="email" placeholder="Your Email" required><br>
+
+            <button type="submit">Donate Now</button>
+        </form>
+    </section>
+
+</body>
+</html>
